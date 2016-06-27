@@ -1,0 +1,14 @@
+FRC        3.035
+constrict  1.0
+T_interval 4.0
+Gdirn      3
+press_in   0.0
+COV        0.0
+RMaxMean   1.0
+RMinMean   1.0
+i_to_e_ratio 1.0
+refvol     0.5
+volume_target 1.e+6
+pmus_step  -196.133
+expiration_type active
+chest_wall_compliance 2039.4324
