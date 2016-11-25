@@ -13,11 +13,6 @@ from pulmonary.utils.io_files import get_default_output_path, get_default_geomet
 def main():
     set_diagnostics_on(False)
 
-    # Set the working directory to the this files directory and then reset after running simulation.
-    file_location = os.path.dirname(__file__)
-    cur_dir = os.getcwd()
-    os.chdir(file_location)
-    
     # Read settings
     ventilation_indices()
 
@@ -27,7 +22,7 @@ def main():
     append_units()
 
     # Set the working directory to the this files directory and then reset after running simulation.
-    file_location = os.path.dirname(__file__)
+    file_location = os.path.dirname(os.path.abspath(__file__))
     cur_dir = os.getcwd()
     os.chdir(file_location)
 
@@ -54,8 +49,6 @@ def main():
 
     # Export terminal solution
     export_terminal_solution(get_default_output_path('terminal.exnode'), group_name)
-
-    os.chdir(cur_dir)
 
 if __name__ == '__main__':
     main()
