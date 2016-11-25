@@ -22,7 +22,7 @@ def main():
     append_units()
 
     # Set the working directory to the this files directory and then reset after running simulation.
-    file_location = os.path.dirname(__file__)
+    file_location = os.path.dirname(os.path.abspath(__file__))
     cur_dir = os.getcwd()
     os.chdir(file_location)
 
