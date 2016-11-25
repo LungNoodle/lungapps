@@ -50,5 +50,6 @@ def main():
     # Export terminal solution
     export_terminal_solution(get_default_output_path('terminal.exnode'), group_name)
 
+
 if __name__ == '__main__':
     main()
