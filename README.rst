@@ -12,7 +12,7 @@ A collection of Python Scripts for running pulmonary simulations using the `Aeth
 
 See the Aether library for instructions on the ways you can make the Aether library available from a Python environment.
 
-TLDR; Instructions
+TL;DR Instructions
 ==================
 (Assumes the `Aether <https://github.com/LungNoodle/lungsim>`_ library is available in your Python environment.)::
 
