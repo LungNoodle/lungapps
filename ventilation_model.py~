@@ -12,7 +12,6 @@ from pulmonary.utils.io_files import get_default_output_path, get_default_geomet
 
 def main():
     set_diagnostics_on(False)
-    die
 
     # Read settings
     ventilation_indices()
