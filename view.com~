@@ -1,0 +1,15 @@
+$subject_name = 'IPF06ST03SE01';
+$exnode_filename = $subject_name.'_terminal.exnode';
+
+gfx r n $exnode_filename
+
+gfx modify g_element vent_model general clear circle_discretization 6 default_coordinate coordinates element_discretization "4*4*4" native_discretization none;
+gfx modify g_element vent_model lines select_on material default selected_material default_selected;
+gfx modify g_element vent_model node_points glyph sphere general size "5*5*5" centre 0,0,0 font default select_on material default data flow spectrum default selected_material default_selected;
+
+gfx edi spectrum
+gfx modify spectrum default clear overwrite_colour;
+gfx modify spectrum default linear reverse range 16.4779 17.8155 extend_above extend_below rainbow colour_range 0 1 component 1;
+
+gfx cre win
+gfx edi sce
