@@ -35,20 +35,20 @@ def main():
     # Output results
     # Export airway nodes and elements
     group_name = 'vent_model'
-    export_1d_elem_geometry(get_default_output_path('small_tree.exelem'), group_name)
-    export_node_geometry(get_default_output_path('small_tree.exnode'), group_name)
+    export_1d_elem_geometry(get_default_output_path('Output/Ventilation/small_tree.exelem'), group_name)
+    export_node_geometry(get_default_output_path('Output/Ventilation/small_tree.exnode'), group_name)
 
     # Export flow element
     field_name = 'flow'
-    export_elem_field(get_default_output_path('ventilation_fields.exelem'), group_name, field_name)
+    export_elem_field(get_default_output_path('Output/Ventilation/ventilation_fields.exelem'), group_name, field_name)
 
     # Export element field for radius
     ne_radius = get_ne_radius()
     field_name = 'radius'
-    export_1d_elem_field(ne_radius, get_default_output_path('ventilation_radius_field.exelem'), group_name, field_name)
+    export_1d_elem_field(ne_radius, get_default_output_path('Output/Ventilation/ventilation_radius_field.exelem'), group_name, field_name)
 
     # Export terminal solution
-    export_terminal_solution(get_default_output_path('terminal.exnode'), group_name)
+    export_terminal_solution(get_default_output_path('Output/Ventilation/terminal.exnode'), group_name)
 
 
 if __name__ == '__main__':

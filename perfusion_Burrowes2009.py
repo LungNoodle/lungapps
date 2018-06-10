@@ -8,7 +8,7 @@ from aether.diagnostics import set_diagnostics_on
 from aether.indices import perfusion_indices, get_ne_radius
 from aether.filenames import read_geometry_main,get_filename
 from aether.geometry import append_units,define_node_geometry, define_1d_elements,define_rad_from_geom
-from aether.exports import export_1d_elem_geometry, export_node_geometry, export_1d_elem_field
+from aether.exports import export_1d_elem_geometry, export_node_geometry, export_1d_elem_field,export_node_field,export_terminal_perfusion
 from aether.pressure_resistance_flow import evaluate_prq
 
 from pulmonary.utils.io_files import get_default_geometry_path, get_default_output_path
@@ -38,13 +38,24 @@ def main():
 
     #export geometry
     group_name = 'perf_model'
-    export_1d_elem_geometry(get_default_output_path('small.exnode'), group_name)
-    export_node_geometry(get_default_output_path('small.exelem'), group_name)
+    export_1d_elem_geometry(get_default_output_path('Output/Perfusion/small.exnode'), group_name)
+    export_node_geometry(get_default_output_path('Output/Perfusion/small.exelem'), group_name)
 
     # export element field for radius
     field_name = 'radius_perf'
     ne_radius = get_ne_radius()
-    export_1d_elem_field(ne_radius, get_default_output_path('radius_perf.exelem'), name, field_name)
+    export_1d_elem_field(ne_radius, get_default_output_path('Output/Perfusion/radius_perf.exelem'), name, field_name)
+
+    # export element field for flow
+    field_name = 'flow_perf'
+    export_1d_elem_field(7, get_default_output_path('Output/Perfusion/flow_perf.exelem'), name, field_name)
+
+    # export node field for pressure
+    field_name = 'pressure_perf'
+    export_node_field(1,get_default_output_path('Output/Perfusion/pressure_perf.exnode'), name, field_name)
+
+    # export terminal solution
+    export_terminal_perfusion(get_default_output_path('Output/Perfusion/terminals.exnode'), 'terminal_q')
 
 
 if __name__ == '__main__':

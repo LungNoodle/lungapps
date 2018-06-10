@@ -1,0 +1,12 @@
+ Group name: inlet
+ #Fields=1
+ 1) pressure_perf, field, rectangular cartesian, #Components=1
+  1.  Value index=1, #Derivatives=0
+ Node:            1
+    1995.000000
+ Node:            2
+    1612.290975
+ Node:            3
+     665.000000
+ Node:            4
+     665.000000

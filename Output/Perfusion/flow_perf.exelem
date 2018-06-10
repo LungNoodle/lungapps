@@ -1,0 +1,17 @@
+ Group name: inlet
+ Shape.  Dimension=1
+ #Scale factor sets=0
+ #Nodes= 0
+ #Fields= 1
+ 1)flow_perf, field, rectangular cartesian, #Components=1
+  flow_perf.  l.Lagrange, no modify, grid based.
+  #xi1=1
+ Element:            1 0 0
+   Values:
+      0.30256E+08  0.30256E+08
+ Element:            2 0 0
+   Values:
+      0.23033E+08  0.23033E+08
+ Element:            3 0 0
+   Values:
+      0.72232E+07  0.72232E+07

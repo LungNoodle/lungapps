@@ -1,0 +1,17 @@
+ Group name: inlet
+ Shape.  Dimension=1
+ #Scale factor sets=0
+ #Nodes= 0
+ #Fields= 1
+ 1)radius_perf, field, rectangular cartesian, #Components=1
+  radius_perf.  l.Lagrange, no modify, grid based.
+  #xi1=1
+ Element:            1 0 0
+   Values:
+      0.16127E+02  0.16127E+02
+ Element:            2 0 0
+   Values:
+      0.98803E+01  0.98803E+01
+ Element:            3 0 0
+   Values:
+      0.10027E+02  0.10027E+02
