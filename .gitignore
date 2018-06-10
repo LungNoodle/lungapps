@@ -93,3 +93,6 @@ ENV/
 
 #linux autosaves
 *~
+
+#outputs
+Output/
